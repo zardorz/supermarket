@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:attrs="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_700"
+    android:orientation="vertical"
+    tools:context=".ui.wizard.intro.PresentationActivity">
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="wrap_content"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        android:background="@android:color/transparent" />
+
+    <!--<me.relex.circleindicator.CircleIndicator-->
+        <!--android:id="@+id/pageIndicatorView"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:background="@color/blue_700"-->
+        <!--android:layout_height="28dp"/>-->
+
+    <com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator
+        android:id="@+id/dots_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_700"
+        app:dotsColor="@color/white"
+        android:layout_gravity="center"
+        app:dampingRatio="0.5"
+        app:dotsSize="10dp"
+        app:dotsSpacing="6dp"
+        app:dotsStrokeWidth="2dp"
+        app:stiffness="300"
+        android:layout_marginBottom="15dp" />
+
+</LinearLayout>

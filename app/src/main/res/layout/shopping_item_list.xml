@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+    android:id="@+id/cardViewInput"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="2dp"
+    app:cardCornerRadius="2dp"
+    app:cardElevation="2dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:padding="2dp">
+
+        <!--Status Color-->
+        <ImageView
+            android:id="@+id/imgShoppingStatusOpen"
+            android:layout_width="3dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:src="@drawable/rectangle_rounded_solid"
+            android:tint="@color/green" />
+        <ImageView
+            android:id="@+id/imgShoppingStatusPaid"
+            android:layout_width="3dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:src="@drawable/rectangle_rounded_solid"
+            android:tint="@color/gray_500"
+            android:visibility="gone" />
+
+        <!--Content-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!--Header-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <ImageView
+                    android:id="@+id/imgShoppingDate"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="0"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_event_black_24dp" />
+
+                <TextView
+                    android:id="@+id/edShoppingDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:gravity="start"
+                    android:text="15/02/2019"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/edShoppingName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="left"
+                    android:text="Compra Mensal"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <!--Detail-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="2dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgShoppingTotalAmount"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_gravity="end"
+                    android:layout_marginRight="2dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_attach_money_black_24dp" />
+
+                <TextView
+                    android:id="@+id/edShoppingTotalAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:gravity="start"
+                    android:text="157,00"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:textSize="12dp" />
+
+                <ImageView
+                    android:id="@+id/imgShoppingQtdItens"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="1dp"
+                    android:adjustViewBounds="true"
+                    android:gravity="end"
+                    android:src="@drawable/ic_list_black_24dp" />
+
+                <TextView
+                    android:id="@+id/edShoppingQtdItens"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:text="128"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:textSize="12dp" />
+
+                <ImageView
+                    android:id="@+id/imgShoppingLocal"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_gravity="end"
+                    android:layout_marginRight="2dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_location_on_black_24dp" />
+
+                <TextView
+                    android:id="@+id/edShoppingLocal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:text="Local"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/edShoppingStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Status: Aberta"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:textSize="12dp"
+                    android:visibility="gone" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--Chevron-->
+        <ImageView
+            android:id="@+id/imgDetail"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_weight="0"
+            android:src="@drawable/ic_chevron_right_black_24dp" />
+
+    </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

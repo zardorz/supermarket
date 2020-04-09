@@ -1,0 +1,203 @@
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/page"
+    style="@style/page"
+    android:layout_height="match_parent"
+    tools:context="ui.statement.ReleaseStatementFragment">
+
+    <LinearLayout
+        android:id="@+id/pageInner"
+        style="@style/page_inner"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        >
+
+        <!--app:layout_constraintTop_toBottomOf="@id/logo"-->
+
+
+
+        <!--Conta Origem-->
+        <TextView
+            android:id="@+id/lblLogin"
+            android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+
+            android:text="Conta" />
+        <Spinner
+            android:id="@+id/spnFinanceAccountFrom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom" />
+
+
+        <!--Data/Valor-->
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal" >
+
+
+            <!--Data-->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/edMovimentDateView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Data"
+                android:layout_weight="1">
+
+                <EditText
+                    android:id="@+id/edMovimentDate"
+                    style="@style/editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="date" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <!--Valor-->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/edAmountView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Valor (R$)"
+                android:layout_weight="1"
+                app:errorEnabled="true">
+
+                <EditText
+                    android:id="@+id/edAmount"
+                    style="@style/editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:ems="10"
+                    android:text="0,00"
+                    android:inputType="numberDecimal"
+                    app:errorEnabled="true"  />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+
+        </LinearLayout>
+
+
+        <!--DescriptionCredit-->
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/edDescriptionView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Descrição" >
+
+            <EditText
+                android:id="@+id/edDescription"
+                style="@style/editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textNoSuggestions"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <!--Tipo Lancamento/Conta Origem-->
+        <RelativeLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+            <!--Tipo Lancamento-->
+            <CheckBox
+                android:id="@+id/chkStatementDebit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:layout_marginTop="8dp"
+                android:textSize="18sp"
+                android:gravity="center_vertical"
+                android:text="Débito" />
+
+            <!--Status-->
+            <Spinner
+                android:id="@+id/spnStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:textSize="18sp"
+                android:entries="@array/statements_status"/>
+
+
+
+            <!--<Spinner-->
+            <!--android:id="@+id/spnStatementType"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:entries="@array/statements_type"-->
+            <!--android:layout_gravity="bottom"-->
+            <!--android:layout_weight="1"/>-->
+
+
+        </RelativeLayout>
+
+
+        <!--&lt;!&ndash;Conta Destino&ndash;&gt;-->
+        <!--<android.support.design.widget.TextInputLayout-->
+        <!--android:id="@+id/tilFinanceAccountToView"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:hint="Conta"-->
+        <!--android:visibility="gone">-->
+
+        <!--<Spinner-->
+        <!--android:id="@+id/spnFinanceAccountTo"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"  />-->
+
+        <!--</android.support.design.widget.TextInputLayout>-->
+
+        <!--Categoria-->
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/tilCategoryView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Categoria"
+            android:visibility="gone">
+
+            <Spinner
+                android:id="@+id/spnCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <!--SubCategoria-->
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/tilSubCategoryView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="salvar"
+            android:visibility="gone">
+
+            <Spinner
+                android:id="@+id/spnSubCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+        </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSaveStatement"
+        style="@style/button"
+        android:text="Salvar"
+        app:layout_constraintBottom_toBottomOf="@id/pageInner"
+        android:layout_marginBottom="30dp"/>
+
+
+</android.support.constraint.ConstraintLayout>

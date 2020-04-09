@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_300"
+    tools:context=".ui.dashboard.DashBoardFragment">
+
+    <!--<include-->
+        <!--layout="@layout/toolbar"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--/>-->
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:id="@+id/ll_cards_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical">
+
+
+            <!--<include-->
+                <!--layout="@layout/card_general_view"-->
+                <!--style="@style/cardview_item"/>-->
+
+            <!--<include-->
+
+                <!--layout="@layout/card_accounts"-->
+                <!--style="@style/cardview_item"/>-->
+
+            <!--<include-->
+                <!--layout="@layout/card_resume_chart"-->
+                <!--style="@style/cardview_item"/>-->
+
+            <!--<include-->
+                <!--layout="@layout/card_resume_expenses"-->
+                <!--style="@style/cardview_item"/>-->
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.constraint.ConstraintLayout>

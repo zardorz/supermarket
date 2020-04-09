@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_shopping_search"
+        android:title="Search"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_search_white_24dp"/>
+
+    <item
+        android:id="@+id/menu_shopping_filter"
+        android:title="Filter"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_filter_white_24dp">
+
+        <menu>
+            <item
+                android:id="@+id/menu_shopping_filter_all"
+                android:icon="@drawable/ic_circle_white"
+                android:title="Todas" />
+
+            <item
+                android:id="@+id/menu_shopping_filter_open"
+                android:icon="@drawable/ic_circle_green"
+                android:title="Abertas" />
+
+            <item
+                android:id="@+id/menu_shopping_filter_paid"
+                android:icon="@drawable/ic_circle_gray"
+                android:title="Fechadas" />
+       </menu>
+    </item>
+
+
+</menu>

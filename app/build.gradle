@@ -1,0 +1,85 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "br.com.bmgsistemas.supermarket"
+        minSdkVersion 24
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_8
+            targetCompatibility JavaVersion.VERSION_1_8
+        }
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            debuggable false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildToolsVersion '27.0.3'
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+
+    implementation 'com.android.support:support-v4:27.1.1'
+    implementation 'com.android.support:cardview-v7:27.1.1'
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+    implementation 'com.android.support:support-core-ui:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    implementation 'com.andkulikov:transitionseverywhere:1.7.9'
+    implementation 'com.github.wangjiegulu:rfab:2.0.0'
+    implementation 'com.google.code.gson:gson:2.8.4'
+    implementation 'io.github.luizgrp.sectionedrecyclerviewadapter:sectionedrecyclerviewadapter:1.2.0'
+
+    implementation 'com.beardedhen:androidbootstrap:2.3.2'
+    implementation 'com.jaredrummler:material-spinner:1.2.5'
+    implementation 'com.google.code.gson:gson:2.8.4'
+    implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
+    implementation 'me.relex:circleindicator:1.2.2'
+
+    implementation 'com.tbuonomo.andrui:viewpagerdotsindicator:2.0.3'
+
+    implementation 'com.skyline.widget:round-corner-layout:1.0.1'
+    implementation 'me.dm7.barcodescanner:zxing:1.9.8'
+
+    implementation 'com.github.barteksc:android-pdf-viewer:3.1.0-beta.1'
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+//    implementation 'pub.devrel:easypermissions:1.2.0'
+
+    def room_version = "1.1.1"
+
+    implementation "android.arch.persistence.room:runtime:$room_version"
+    annotationProcessor "android.arch.persistence.room:compiler:$room_version"
+    // use kapt for Kotlin
+
+    // optional - RxJava support for Room
+    implementation "android.arch.persistence.room:rxjava2:$room_version"
+//
+//    // optional - Guava support for Room, including Optional and ListenableFuture
+//    implementation "android.arch.persistence.room:guava:$room_version"
+//
+//    // Test helpers
+//    testImplementation "android.arch.persistence.room:testing:$room_version"
+
+//    implementation "android.arch.persistence.room:runtime:1.0.0"
+//    annotationProcessor "android.arch.persistence.room:compiler:1.0.0"
+
+
+}

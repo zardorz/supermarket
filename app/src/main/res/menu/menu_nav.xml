@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_dashboard"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="DashBoard" />
+        <item
+            android:id="@+id/nav_finance_account"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Contas" />
+        <!--<item-->
+            <!--android:id="@+id/nav_statement"-->
+            <!--android:icon="@drawable/ic_menu_gallery"-->
+            <!--android:title="Extrato" />-->
+        <!--<item-->
+            <!--android:id="@+id/nav_release_statement"-->
+            <!--android:icon="@drawable/ic_menu_gallery"-->
+            <!--android:title="Lançamento Avulso" />-->
+        <!--<item-->
+            <!--android:id="@+id/nav_categories"-->
+            <!--android:icon="@drawable/ic_menu_slideshow"-->
+            <!--android:title="Categorias" />-->
+
+        <item
+            android:id="@+id/nav_shopping_cart"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Compras" />
+
+        <item
+            android:id="@+id/nav_products"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Produtos" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_exit"
+                android:icon="@drawable/ic_menu_slideshow"
+                android:title="Sair" />
+
+            <item
+                android:id="@+id/nav_about"
+                android:icon="@drawable/ic_menu_slideshow"
+                android:title="Sobre" />
+        </menu>
+    </item>
+
+
+    <!--<item android:title="Communicate1">-->
+        <!--<menu>-->
+            <!--<item-->
+                <!--android:id="@+id/nav_exit1"-->
+                <!--android:icon="@drawable/ic_menu_slideshow"-->
+                <!--android:title="Sair" />-->
+
+            <!--<item-->
+                <!--android:id="@+id/nav_about1"-->
+                <!--android:icon="@drawable/ic_menu_slideshow"-->
+                <!--android:title="Sobre" />-->
+        <!--</menu>-->
+    <!--</item>-->
+
+    <!--<item android:title="Communicate2">-->
+        <!--<menu>-->
+            <!--<item-->
+                <!--android:id="@+id/nav_exit2"-->
+                <!--android:icon="@drawable/ic_menu_slideshow"-->
+                <!--android:title="Sair" />-->
+
+            <!--<item-->
+                <!--android:id="@+id/nav_about2"-->
+                <!--android:icon="@drawable/ic_menu_slideshow"-->
+                <!--android:title="Sobre" />-->
+        <!--</menu>-->
+    <!--</item>-->
+</menu>

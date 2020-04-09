@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.product.ProductAddNewFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center|top"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblBarCode"
+            android:text="Código de barras"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/edBarCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/edProductNameView"
+            app:errorEnabled="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="-10dp"
+            android:layout_weight="1">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/edProductName"
+                style="@style/text_view"
+                app:errorEnabled="true"
+                android:hint="Nome"
+                android:inputType="textEmailAddress" />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+
+        <TextView
+            android:id="@+id/lblProductBrand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Marca"
+            android:paddingBottom="0dp"
+            android:layout_weight="1"/>
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/spnProductBrand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:entries="@array/array_name"
+            android:theme="@style/spinnerTheme"/>
+
+        ----
+        <TextView
+            android:id="@+id/lblManufacturer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Fabricante"
+            android:paddingBottom="0dp"
+            android:layout_weight="1"/>
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/spnManufacturer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:entries="@array/array_name"
+            android:theme="@style/spinnerTheme"/>
+
+        ----
+        <TextView
+            android:id="@+id/lblProductCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Categoria"
+            android:paddingBottom="0dp"
+            android:layout_weight="1"/>
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/spnProductCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:entries="@array/array_name"
+            android:theme="@style/spinnerTheme"/>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btnSave"
+            android:text="Salvar"
+            style="@style/action_button"/>
+
+    </LinearLayout>
+
+
+
+</FrameLayout>
+
+
+<!--
+//        productEntity.Name = "Detergente Líquido OMO Multiação Poder Acelerador 3L";
+//        productEntity.BarCode = "7891150020689";
+//        productEntity.ProductBrandID = productBrandEntity.ID;
+//        productEntity.ManufacturerID = manufacturerEntity.ID;
+//        productEntity.ProductCategoryID = productCategoryEntity.ID;
+//        productEntity.NCM = "3402.20.00";
+-->
